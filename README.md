@@ -42,5 +42,6 @@ This repository contains my personal solutions to the Advent of Code 2024 puzzle
 ## 🧩 Day's Puzzles
 Here is the list of solved puzzles:
 1. [Day 1: Historian Hysteria](Day1/ "Day 1: Historian Hysteria")
+1. [Day 2: Red-Nosed Reports](Day2/ "Day 2: Red-Nosed Reports")
 
 More to come as the challenge progresses!
