@@ -15,7 +15,16 @@ public class RedNosedReports {
         List<List<Integer>> reports = getReports();
 
         for (List<Integer> report : reports) {
+
+            // Part 1
+            /* 
             if (validateReport(report)) {
+                safeReports++;
+            }
+            */
+
+            // Part 2
+            if (validateReport(report) || reportCanBeSafe(report)) {
                 safeReports++;
             }
         }
@@ -59,6 +68,22 @@ public class RedNosedReports {
             }
         }
         return true;
+    };
+
+    /*
+     * Function that validates if removing a level from the report can make the
+     * report safe:
+     */
+    public static boolean reportCanBeSafe(List<Integer> report) {
+        for (int i = 0; i < report.size(); i++) {
+            List<Integer> adjustedLevels = new ArrayList<>(report);
+            adjustedLevels.remove(i);
+            
+            if (validateReport(adjustedLevels)) {
+                return true;
+            }
+        }
+        return false;
     };
 
     /*
